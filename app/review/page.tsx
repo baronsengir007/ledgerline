@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function Review() {
   return (
     <main>
-      <header className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5">
+      <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         <Link href="/" className="font-display text-xl font-semibold tracking-tight">
           Ledgerline
         </Link>
@@ -28,7 +28,7 @@ export default function Review() {
         </nav>
       </header>
 
-      <section className="mx-auto max-w-[1400px] px-6 pb-24 pt-8">
+      <section className="mx-auto max-w-6xl px-6 pb-24 pt-8">
         <p className="text-xs font-medium uppercase tracking-[0.18em] text-moss-deep">
           Product demo
         </p>
@@ -46,7 +46,7 @@ export default function Review() {
       </section>
 
       <footer className="border-t border-rule">
-        <div className="mx-auto max-w-[1400px] px-6 py-10 text-sm text-ink-soft">
+        <div className="mx-auto max-w-6xl px-6 py-10 text-sm text-ink-soft">
           <p>
             <span className="font-display font-semibold text-ink">
               Ledgerline
