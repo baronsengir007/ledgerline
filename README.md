@@ -36,8 +36,9 @@ Derived decisions, each traceable to that read:
 - **Split-screen hero with a live payoff.** The barrier is motivation,
   so the product's value is shown, not described: the hero runs a
   self-playing ledger in which payments match invoices (highlighter
-  sweep), a partial payment gets flagged for review, and the loop
-  restarts. Show the payoff early beats explain the payoff.
+  sweep) and a partial payment gets flagged for review. It plays once
+  and settles — no infinite loops in the interface, per the field
+  guide's motion rules. Show the payoff early beats explain the payoff.
 - **One primary behaviour per screen.** A single CTA ("Start free"),
   repeated at the Z-terminal; secondary links are visually subordinate.
 - **No fabricated social proof.** A fictional product has no customers,

@@ -43,7 +43,7 @@ export default function LedgerDemo() {
       return;
     }
     let i = 0;
-    const tick = () => {
+    const id = setInterval(() => {
       if (i < FEED.length) {
         const f = FEED[i];
         setStep(i);
@@ -52,12 +52,11 @@ export default function LedgerDemo() {
         );
         i += 1;
       } else {
-        i = 0;
+        // Play once, then settle: no infinite loops in the interface.
+        clearInterval(id);
         setStep(-1);
-        setRows(START);
       }
-    };
-    const id = setInterval(tick, 1700);
+    }, 1700);
     return () => clearInterval(id);
   }, []);
 
