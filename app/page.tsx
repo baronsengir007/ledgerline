@@ -97,7 +97,7 @@ export default function Home() {
   return (
     <main>
       {/* Nav */}
-      <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+      <header className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5">
         <span className="font-display text-xl font-semibold tracking-tight">
           Ledgerline
         </span>
@@ -113,7 +113,7 @@ export default function Home() {
       </header>
 
       {/* Hero: split screen — headline left, live payoff right */}
-      <section className="mx-auto grid max-w-6xl items-center gap-10 px-6 pb-20 pt-12 lg:grid-cols-[1fr_1.1fr] lg:gap-14">
+      <section className="mx-auto grid max-w-[1400px] items-center gap-10 px-6 pb-20 pt-12 lg:grid-cols-[1fr_1.1fr] lg:gap-14">
         <div>
           <p className="rise mb-4 text-xs font-medium uppercase tracking-[0.18em] text-moss-deep">
             Invoice reconciliation for agencies
@@ -140,7 +140,7 @@ export default function Home() {
 
       {/* How it works: a real sequence, so numbered */}
       <section id="how" className="border-y border-rule bg-card">
-        <div className="mx-auto max-w-6xl px-6 py-20">
+        <div className="mx-auto max-w-[1400px] px-6 py-20">
           <h2 className="font-display text-3xl font-semibold tracking-tight">
             Three steps, then it runs itself
           </h2>
@@ -157,7 +157,7 @@ export default function Home() {
       </section>
 
       {/* Features */}
-      <section className="mx-auto max-w-6xl px-6 py-20">
+      <section className="mx-auto max-w-[1400px] px-6 py-20">
         <h2 className="font-display text-3xl font-semibold tracking-tight">
           Built for the messy reality of getting paid
         </h2>
@@ -175,7 +175,7 @@ export default function Home() {
 
       {/* Pricing */}
       <section id="pricing" className="border-y border-rule bg-card">
-        <div className="mx-auto max-w-6xl px-6 py-20">
+        <div className="mx-auto max-w-[1400px] px-6 py-20">
           <h2 className="font-display text-3xl font-semibold tracking-tight">
             Plain pricing, no surprises at renewal
           </h2>
@@ -219,7 +219,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA at the Z-terminal */}
-      <section className="mx-auto max-w-6xl px-6 py-20">
+      <section className="mx-auto max-w-[1400px] px-6 py-20">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
           <div>
             <h2 className="font-display text-3xl font-semibold tracking-tight">
@@ -236,7 +236,7 @@ export default function Home() {
 
       {/* Footer with honest disclosure */}
       <footer className="border-t border-rule">
-        <div className="mx-auto max-w-6xl px-6 py-10 text-sm text-ink-soft">
+        <div className="mx-auto max-w-[1400px] px-6 py-10 text-sm text-ink-soft">
           <p>
             <span className="font-display font-semibold text-ink">
               Ledgerline
