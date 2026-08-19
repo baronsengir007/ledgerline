@@ -1,3 +1,4 @@
+import Link from "next/link";
 import LedgerDemo from "./LedgerDemo";
 
 const STEPS = [
@@ -105,6 +106,9 @@ export default function Home() {
           <a href="#how" className="text-ink-soft hover:text-ink">
             How it works
           </a>
+          <Link href="/review/" className="text-ink-soft hover:text-ink">
+            Product demo
+          </Link>
           <a href="#pricing" className="text-ink-soft hover:text-ink">
             Pricing
           </a>
@@ -112,7 +116,7 @@ export default function Home() {
         </nav>
       </header>
 
-      {/* Hero: split screen — headline left, live payoff right */}
+      {/* Hero: split screen: headline left, live payoff right */}
       <section className="mx-auto grid max-w-[1400px] items-center gap-10 px-6 pb-20 pt-12 lg:grid-cols-[1fr_1.1fr] lg:gap-14">
         <div>
           <p className="rise mb-4 text-xs font-medium uppercase tracking-[0.18em] text-moss-deep">
@@ -128,9 +132,12 @@ export default function Home() {
           </p>
           <div className="rise rise-3 mt-8 flex items-center gap-4">
             <Cta>Start free</Cta>
-            <a href="#how" className="text-sm font-medium text-moss-deep underline-offset-4 hover:underline">
-              See how it works
-            </a>
+            <Link
+              href="/review/"
+              className="text-sm font-medium text-moss-deep underline-offset-4 hover:underline"
+            >
+              Try the review queue
+            </Link>
           </div>
         </div>
         <div className="rise rise-2">
@@ -241,8 +248,7 @@ export default function Home() {
             <span className="font-display font-semibold text-ink">
               Ledgerline
             </span>{" "}
-            is a fictional product. This site is a portfolio demonstration
-            built by Rienk Rienks —{" "}
+            is a fictional product. A portfolio project by Rienk Rienks -{" "}
             <a
               href="https://github.com/baronsengir007/ledgerline"
               className="text-moss-deep underline underline-offset-4"

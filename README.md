@@ -37,7 +37,7 @@ Derived decisions, each traceable to that read:
   so the product's value is shown, not described: the hero runs a
   self-playing ledger in which payments match invoices (highlighter
   sweep) and a partial payment gets flagged for review. It plays once
-  and settles — no infinite loops in the interface, per the field
+  and settles: no infinite loops in the interface, per the field
   guide's motion rules. Show the payoff early beats explain the payoff.
 - **One primary behaviour per screen.** A single CTA ("Start free"),
   repeated at the Z-terminal; secondary links are visually subordinate.
@@ -58,6 +58,24 @@ Derived decisions, each traceable to that read:
 Quality floor: responsive to mobile, visible keyboard focus,
 `prefers-reduced-motion` respected (the ledger renders in its settled
 state), semantic HTML, system status in the demo via `aria-live`.
+
+## Also demonstrated here
+
+- **A working app surface, not just marketing.** `/review` is the
+  product's review queue as a live demo: filter tabs, approve/reject
+  with undo, an empty state that means something, progress counter with
+  `aria-live`, and state persisted to localStorage. Optimistic,
+  reversible actions over confirmation dialogs.
+- **Type-safe interaction code.** The queue is a typed React client
+  component (discriminated status unions, no `any`), composed against
+  static pages via the App Router.
+- **Data thinking.** If this were real, the core schema is three tables:
+  `invoices (id, client_id, amount_cents, currency, issued_at, status)`,
+  `payments (id, amount_cents, currency, received_at, iban_hash, raw_ref)`
+  and `matches (invoice_id, payment_id, confidence, matched_by,
+  decided_at)` with an append-only `match_events` audit table: a shape
+  that maps directly onto Postgres/Supabase with row-level security per
+  agency.
 
 ## Design tokens
 
