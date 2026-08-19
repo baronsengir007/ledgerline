@@ -158,13 +158,13 @@ export default function ReviewQueue() {
               <div className="flex gap-2">
                 <button
                   onClick={() => act(e.id, "approved")}
-                  className="rounded bg-moss-deep px-3 py-1.5 text-sm font-medium text-paper hover:bg-moss"
+                  className="press rounded bg-moss-deep px-3 py-1.5 text-sm font-medium text-paper transition-colors hover:bg-moss"
                 >
                   Approve match
                 </button>
                 <button
                   onClick={() => act(e.id, "rejected")}
-                  className="rounded border border-rule px-3 py-1.5 text-sm text-ink-soft hover:border-flag hover:text-flag"
+                  className="press rounded border border-rule px-3 py-1.5 text-sm text-ink-soft transition-colors hover:border-flag hover:text-flag"
                 >
                   Not a match
                 </button>

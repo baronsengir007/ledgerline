@@ -21,7 +21,7 @@ export default function Review() {
           </Link>
           <Link
             href="/#pricing"
-            className="inline-block rounded-md bg-moss-deep px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-moss"
+            className="press inline-block rounded-md bg-moss-deep px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-moss"
           >
             Start free
           </Link>

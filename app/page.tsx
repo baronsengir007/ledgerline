@@ -87,7 +87,7 @@ function Cta({ children }: { children: React.ReactNode }) {
   return (
     <a
       href="#pricing"
-      className="inline-block rounded-md bg-moss-deep px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-moss"
+      className="press inline-block rounded-md bg-moss-deep px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-moss"
     >
       {children}
     </a>
@@ -151,7 +151,7 @@ export default function Home() {
           <h2 className="font-display text-3xl font-semibold tracking-tight">
             Three steps, then it runs itself
           </h2>
-          <div className="mt-10 grid gap-10 md:grid-cols-3">
+          <div data-reveal className="mt-10 grid gap-10 md:grid-cols-3">
             {STEPS.map((s) => (
               <div key={s.n}>
                 <div className="font-mono text-sm text-moss-deep">{s.n} /</div>
@@ -168,7 +168,7 @@ export default function Home() {
         <h2 className="font-display text-3xl font-semibold tracking-tight">
           Built for the messy reality of getting paid
         </h2>
-        <div className="mt-10 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div data-reveal className="mt-10 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
           {FEATURES.map((f) => (
             <div key={f.title} className="border-t border-rule pt-4">
               <h3 className="font-semibold">{f.title}</h3>
@@ -186,11 +186,11 @@ export default function Home() {
           <h2 className="font-display text-3xl font-semibold tracking-tight">
             Plain pricing, no surprises at renewal
           </h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div data-reveal className="mt-10 grid gap-6 md:grid-cols-3">
             {PLANS.map((p) => (
               <div
                 key={p.name}
-                className={`rounded-lg border p-6 ${
+                className={`lift rounded-lg border p-6 ${
                   p.highlight
                     ? "border-moss-deep bg-paper shadow-[0_12px_32px_-16px_rgba(29,74,56,0.35)]"
                     : "border-rule bg-paper"
