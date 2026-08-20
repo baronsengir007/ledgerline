@@ -55,11 +55,14 @@ Derived decisions, each traceable to that read:
   layer-cake sections, Z-pattern scan for a sparse landing page), chosen
   by behavioural state rather than by trend.
 
-- **Reveals staggered per element, not per block.** Items inside one
-  section arrive 60ms after each other on an ease-out curve, so a
-  section builds instead of flicking into place. Transform and opacity
-  only; `prefers-reduced-motion` renders every section settled, with no
-  transition and no delay.
+- **Reveals that cannot hide content.** Scroll reveals are CSS
+  scroll-driven animations (`animation-timeline: view()`) rather than a
+  JavaScript IntersectionObserver, wrapped in `@supports` and
+  `prefers-reduced-motion: no-preference`. Without support, or with
+  reduced motion requested, the `opacity: 0` starting state never
+  applies, so content cannot get stuck invisible. Items in a section
+  animate over slightly offset scroll ranges, which builds the section
+  instead of flicking it into place.
 
 Quality floor: responsive to mobile, visible keyboard focus,
 `prefers-reduced-motion` respected (the ledger renders in its settled
