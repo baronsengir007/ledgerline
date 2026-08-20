@@ -88,3 +88,22 @@ state), semantic HTML, system status in the demo via `aria-live`.
 Paper `#f6f7f4`, ink `#16241f`, moss `#2e6b52` / `#1d4a38`, marker
 yellow `#f2e34d`, flag orange `#b3542e`. Type: Fraunces (display),
 IBM Plex Sans (body), IBM Plex Mono (ledger figures).
+
+## How this was built
+
+Written in Claude Code, but the design decisions come from a fixed
+pipeline rather than from prompting until something looks nice. Two
+reference documents of my own do the deciding: a behavior-driven UI
+method (the five behavioural states and the Behavior Read above) and an
+interface field guide (named layout patterns, style families, and the
+cliches to avoid, refreshed as they rotate). Two Claude Code skills
+execute against those: `design-taste-frontend` for visual direction and
+anti-template discipline, and `emil-design-eng` for the motion rules
+(transform and opacity only, ease-out curves, hover gated behind a
+pointer query, reduced motion respected).
+
+Behaviour outranks aesthetics at every conflict, and every visual
+choice above is traceable back to the Behavior Read. Verification is
+part of the loop, not a final glance: layouts are checked in a real
+browser at desktop and 390px, and reduced-motion is tested with the
+media feature actually forced on rather than assumed.
