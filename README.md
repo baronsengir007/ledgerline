@@ -55,6 +55,12 @@ Derived decisions, each traceable to that read:
   layer-cake sections, Z-pattern scan for a sparse landing page), chosen
   by behavioural state rather than by trend.
 
+- **Reveals staggered per element, not per block.** Items inside one
+  section arrive 60ms after each other on an ease-out curve, so a
+  section builds instead of flicking into place. Transform and opacity
+  only; `prefers-reduced-motion` renders every section settled, with no
+  transition and no delay.
+
 Quality floor: responsive to mobile, visible keyboard focus,
 `prefers-reduced-motion` respected (the ledger renders in its settled
 state), semantic HTML, system status in the demo via `aria-live`.

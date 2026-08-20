@@ -98,11 +98,11 @@ export default function Home() {
   return (
     <main>
       {/* Nav */}
-      <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+      <header className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-3 px-6 py-5">
         <span className="font-display text-xl font-semibold tracking-tight">
           Ledgerline
         </span>
-        <nav className="flex items-center gap-6 text-sm">
+        <nav className="flex flex-wrap items-center justify-end gap-x-6 gap-y-3 text-sm">
           <a href="#how" className="text-ink-soft hover:text-ink">
             How it works
           </a>
@@ -140,7 +140,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="rise rise-2">
+        <div className="rise rise-2 min-w-0">
           <LedgerDemo />
         </div>
       </section>
@@ -151,9 +151,9 @@ export default function Home() {
           <h2 className="font-display text-3xl font-semibold tracking-tight">
             Three steps, then it runs itself
           </h2>
-          <div data-reveal className="mt-10 grid gap-10 md:grid-cols-3">
-            {STEPS.map((s) => (
-              <div key={s.n}>
+          <div className="mt-10 grid gap-10 md:grid-cols-3">
+            {STEPS.map((s, i) => (
+              <div key={s.n} data-reveal data-delay={i || undefined}>
                 <div className="font-mono text-sm text-moss-deep">{s.n} /</div>
                 <h3 className="mt-2 text-lg font-semibold">{s.title}</h3>
                 <p className="mt-2 leading-relaxed text-ink-soft">{s.body}</p>
@@ -168,9 +168,14 @@ export default function Home() {
         <h2 className="font-display text-3xl font-semibold tracking-tight">
           Built for the messy reality of getting paid
         </h2>
-        <div data-reveal className="mt-10 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
-          {FEATURES.map((f) => (
-            <div key={f.title} className="border-t border-rule pt-4">
+        <div className="mt-10 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+          {FEATURES.map((f, i) => (
+            <div
+              key={f.title}
+              data-reveal
+              data-delay={(i % 3) || undefined}
+              className="border-t border-rule pt-4"
+            >
               <h3 className="font-semibold">{f.title}</h3>
               <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">
                 {f.body}
@@ -186,10 +191,12 @@ export default function Home() {
           <h2 className="font-display text-3xl font-semibold tracking-tight">
             Plain pricing, no surprises at renewal
           </h2>
-          <div data-reveal className="mt-10 grid gap-6 md:grid-cols-3">
-            {PLANS.map((p) => (
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {PLANS.map((p, i) => (
               <div
                 key={p.name}
+                data-reveal
+                data-delay={i || undefined}
                 className={`lift rounded-lg border p-6 ${
                   p.highlight
                     ? "border-moss-deep bg-paper shadow-[0_12px_32px_-16px_rgba(29,74,56,0.35)]"

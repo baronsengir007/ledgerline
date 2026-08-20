@@ -103,10 +103,29 @@ body {
     transform 550ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
+/* Elements in one group arrive after each other, not as a block */
+[data-reveal][data-delay="1"] {
+  transition-delay: 60ms;
+}
+[data-reveal][data-delay="2"] {
+  transition-delay: 120ms;
+}
+[data-reveal][data-delay="3"] {
+  transition-delay: 180ms;
+}
+[data-reveal][data-delay="4"] {
+  transition-delay: 240ms;
+}
+[data-reveal][data-delay="5"] {
+  transition-delay: 300ms;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .press,
-  [data-reveal] {
+  [data-reveal],
+  [data-reveal][data-delay] {
     transition: none;
+    transition-delay: 0ms;
   }
   .press:active {
     transform: none;

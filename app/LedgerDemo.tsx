@@ -64,7 +64,7 @@ export default function LedgerDemo() {
 
   return (
     <div className="rounded-lg border border-rule bg-card shadow-[0_1px_0_rgba(22,36,31,0.06),0_12px_32px_-16px_rgba(22,36,31,0.25)]">
-      <div className="flex items-center justify-between border-b border-rule px-4 py-2.5">
+      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 border-b border-rule px-4 py-2.5">
         <span className="text-xs font-medium uppercase tracking-wider text-ink-soft">
           Open invoices · August
         </span>
@@ -75,6 +75,8 @@ export default function LedgerDemo() {
           {feedItem && !reduced ? `Bank feed: ${feedItem.ref}` : "Bank feed connected"}
         </span>
       </div>
+      {/* The table scrolls inside the card so it cannot widen the page */}
+      <div className="overflow-x-auto">
       <table className="w-full text-sm">
         <thead>
           <tr className="border-b border-rule text-left text-xs uppercase tracking-wider text-ink-soft">
@@ -103,6 +105,7 @@ export default function LedgerDemo() {
           ))}
         </tbody>
       </table>
+      </div>
       <div className="border-t border-rule px-4 py-2.5 text-xs text-ink-soft">
         Partial payment on INV-2044 lands in your review queue with a
         confidence score. Everything else closes itself.
